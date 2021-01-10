@@ -1,5 +1,7 @@
 package console.function;
 
+import console.model.AlphabetX;
+
 import java.util.Arrays;
 import java.util.List;
 
