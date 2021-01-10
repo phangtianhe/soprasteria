@@ -13,12 +13,25 @@ A 7                                 Print A character with size of 7 (Allowed Si
 U 7                                 Print U character with size of 7 (Allowed Size input = Odd number from 3 to 21 inclusive
 ```
 
-# Assumptions
+# Approach & Assumptions
 ```
-size is the height of the printed alphabet, which is not always equal to the width, but for X Y Z height == width
+Size is the height of the printed alphabet, which is not always equal to the width, but for X Y Z height == width
+Since given example of X Y Z is height == width, that is preserved
+
+For X the approach is to draw a diagonal and then another of it mirrored
+For Y the approach is to take the top and middle part of how x is draw and then just continue down the middle dot
+For Z the approach is to take the mirrored diagonal of X approach and then draw a line at first and last line
+
+
 For alphabet A,U to preserve the shape of the alphabet, the width will not be same size at height
 Width for A will be height*2-1
 Width for U will be height+2
+
+For A the approach is to draw 2 diagonal that starts from midpoint of the horizontal axes to the bottom left and right with the middle
+section of vertical to be drawn as long as it is within the inner portion of the diagonals
+
+For U the approach is to draw 2 straight line down at far left and right of verticals, omitting the bottom left right corner and also draw a horizontal line at the last line
+
 ```
 
 # Compile the program

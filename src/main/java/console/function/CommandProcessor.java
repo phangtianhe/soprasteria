@@ -1,9 +1,6 @@
 package console.function;
 
-import console.model.AlphabetX;
-
-import java.util.Arrays;
-import java.util.List;
+import console.model.*;
 
 public class CommandProcessor {
 
@@ -18,16 +15,7 @@ public class CommandProcessor {
             throw new IllegalArgumentException("Input command must be 2 argument length");
         }
 
-        List<String> acceptableAlphabet = Arrays.asList("X", "Y", "Z", "A", "U");
-
-        String alphabet = arguments[0].toUpperCase();
-
-        if (!acceptableAlphabet.contains(alphabet)) {
-            throw new IllegalArgumentException("Unsupported alphabet");
-        }
-
-
-        int size = 0;
+        int size;
 
         try {
             size = Integer.parseInt(arguments[1]);
@@ -39,6 +27,28 @@ public class CommandProcessor {
             throw new IllegalArgumentException("Size must be odd number between 3 to 21 inclusive");
         }
 
-        // TODO: call the functions to print
+        Alphabet alphabet;
+
+        switch (arguments[0].toUpperCase()) {
+            case "X":
+                alphabet = new AlphabetX(size);
+                break;
+            case "Y":
+                alphabet = new AlphabetY(size);
+                break;
+            case "Z":
+                alphabet = new AlphabetZ(size);
+                break;
+            case "A":
+                alphabet = new AlphabetA(size);
+                break;
+            case "U":
+                alphabet = new AlphabetU(size);
+                break;
+            default:
+                throw new IllegalArgumentException("Unsupported alphabet");
+        }
+
+        alphabet.draw();
     }
 }

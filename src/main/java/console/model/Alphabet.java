@@ -1,6 +1,6 @@
 package console.model;
 
-abstract class Alphabet {
+public abstract class Alphabet {
     int fontSize;
-    abstract void draw();
+    public abstract void draw();
 }
