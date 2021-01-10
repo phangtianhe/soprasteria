@@ -36,5 +36,7 @@ For U the approach is to draw 2 straight line down at far left and right of vert
 
 # Compile the program
 ```
-
+Intellij:
+File -> Project Structure -> Artifacts -> Add (+ Sign) -> JAR -> From modules with dependencies -> Select Main(console) as main class -> Ok -> Tick include in project build -> Ok
+Jar will then will be built at user specified out folder as project builds or manually build the artifact via Build -> Build Artifacts..
 ```
