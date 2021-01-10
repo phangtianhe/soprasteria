@@ -29,7 +29,7 @@ public class AlphabetXTest {
 
     @Test
     public void shouldDrawXFontSize3Correctly(){
-        AlphabetX alphabet = new AlphabetX(3);
+        Alphabet alphabet = new AlphabetX(3);
         alphabet.draw();
         Assert.assertEquals(
                 "* *\r\n" +
@@ -39,7 +39,7 @@ public class AlphabetXTest {
 
     @Test
     public void shouldDrawXFontSize7Correctly(){
-        AlphabetX alphabet = new AlphabetX(7);
+        Alphabet alphabet = new AlphabetX(7);
         alphabet.draw();
         Assert.assertEquals(
                 "*     *\r\n" +

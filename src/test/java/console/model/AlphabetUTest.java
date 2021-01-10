@@ -8,7 +8,7 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public class AlphabetYTest {
+public class AlphabetUTest {
     // To be able to test on printed output
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
@@ -28,28 +28,25 @@ public class AlphabetYTest {
     }
 
     @Test
-    public void shouldDrawYFontSize5Correctly(){
-        Alphabet alphabet = new AlphabetY(5);
+    public void shouldDrawUFontSize3Correctly() {
+        Alphabet alphabet = new AlphabetU(3);
         alphabet.draw();
+
         Assert.assertEquals(
                 "*   *\r\n" +
-                        " * * \r\n" +
-                        "  *  \r\n" +
-                        "  *  \r\n" +
-                        "  *  \r\n", outContent.toString());
+                        "*   *\r\n" +
+                        " *** \r\n", outContent.toString());
     }
 
     @Test
-    public void shouldDrawYFontSize7Correctly(){
-        Alphabet alphabet = new AlphabetY(7);
+    public void shouldDrawUFontSize5Correctly() {
+        Alphabet alphabet = new AlphabetU(5);
         alphabet.draw();
         Assert.assertEquals(
                 "*     *\r\n" +
-                        " *   * \r\n" +
-                        "  * *  \r\n" +
-                        "   *   \r\n" +
-                        "   *   \r\n" +
-                        "   *   \r\n" +
-                        "   *   \r\n", outContent.toString());
+                        "*     *\r\n" +
+                        "*     *\r\n" +
+                        "*     *\r\n" +
+                        " ***** \r\n", outContent.toString());
     }
 }

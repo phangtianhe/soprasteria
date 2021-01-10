@@ -12,7 +12,6 @@ public class AlphabetY extends Alphabet {
         int midPoint = 0;
 
         for (i = 0; i < fontSize; i++) {
-            // printing the horizontal *
             for (j = 0; j < fontSize; j++) {
                 // To draw up the portion from middle dot to upper section
                 if (i < (fontSize / 2) + 1) {
