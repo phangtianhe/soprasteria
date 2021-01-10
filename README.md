@@ -2,7 +2,7 @@
 
 # Run the program
 ```
-Run Program : java -jar soprasteria-console.jar
+Run Program : java -jar soprasteria.jar
 
 Command                             Description
 Q                                   Quit and close the application

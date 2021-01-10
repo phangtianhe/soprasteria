@@ -6,8 +6,11 @@ import static console.function.CommandProcessor.processInput;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner keyboardInput = new Scanner(System.in);
-        while (keyboardInput.hasNext()) {
+        while (true) {
+            System.out.println("2 Arguments, Argument format : [Alphabet] [3-21 Odd] ex: X 7");
+            System.out.print("Enter command :");
             String input = keyboardInput.nextLine();
             // Trim the ends
             input = input.trim();
@@ -17,7 +20,8 @@ public class Main {
 
             try {
                 // Q input command will terminate application
-                if (input.equals("Q")) {
+                if (input.toUpperCase().equals("Q")) {
+                    System.out.println("Command to exit accepted, application terminating....");
                     break;
                 }
 
